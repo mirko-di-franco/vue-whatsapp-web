@@ -12,17 +12,17 @@ createApp({
           messages: [
             {
               date: '10/01/2020 15:30:55',
-              message: 'Hai portato a spasso il cane?',
+              message: 'Hey Alexander, come stai?',
               status: 'sent'
             },
             {
               date: '10/01/2020 15:30:55',
-              message: 'Ricordati di stendere i panni',
-              status: 'sent'
+              message: 'Ciao! Sto bene, grazie. E tu?',
+              status: 'received'
             },
             {
               date: '10/01/2020 15:30:55',
-              message: 'Tutto fatto!',
+              message: 'Anche io sto bene, grazie. Hai piani per il weekend?',
               status: 'sent'
             }
           ],
@@ -34,17 +34,17 @@ createApp({
           messages: [
             {
               date: '10/01/2020 15:30:55',
-              message: 'Hai portato a spasso il cane?',
+              message: "Hey Olivia, hai visto l'ultimo episodio della tua serie preferita?",
               status: 'sent'
             },
             {
               date: '10/01/2020 15:30:55',
-              message: 'Ricordati di stendere i panni',
-              status: 'sent'
+              message: "Sì, l'ho visto. Non posso credere a quella svolta!",
+              status: 'received'
             },
             {
               date: '10/01/2020 15:30:55',
-              message: 'Tutto fatto!',
+              message: 'È stato incredibile! Possiamo discuterne la prossima volta che ci vediamo?',
               status: 'sent'
             }
           ],
@@ -56,17 +56,17 @@ createApp({
           messages: [
             {
               date: '10/01/2020 15:30:55',
-              message: 'prova?',
+              message: 'Salve Benjamin, hai sentito parlare della nuova serie TV?',
               status: 'sent'
             },
             {
               date: '10/01/2020 15:30:55',
-              message: 'Ricordati di stendere i panni',
-              status: 'sent'
+              message: "Sì, l'ho vista. È fantastica!",
+              status: 'received'
             },
             {
               date: '10/01/2020 15:30:55',
-              message: 'Tutto fatto!',
+              message: 'Wow, devo assolutamente iniziarla. Grazie per la raccomandazione!',
               status: 'sent'
             }
           ],
@@ -78,17 +78,17 @@ createApp({
           messages: [
             {
               date: '10/01/2020 15:30:55',
-              message: 'prova?',
+              message: 'Ciao Christopher, come è andata la tua giornata?',
               status: 'sent'
             },
             {
               date: '10/01/2020 15:30:55',
-              message: 'Ricordati di stendere i panni',
-              status: 'sent'
+              message: 'È stata piuttosto stressante, ma ora è meglio. Grazie.',
+              status: 'received'
             },
             {
               date: '10/01/2020 15:30:55',
-              message: 'Tutto fatto!',
+              message: 'Capisco. Se hai bisogno di parlare, sono qui.',
               status: 'sent'
             }
           ],
@@ -100,17 +100,17 @@ createApp({
           messages: [
             {
               date: '10/01/2020 15:30:55',
-              message: 'prova?',
+              message: 'Ciao David, hai visto il nuovo film in uscita?',
               status: 'sent'
             },
             {
               date: '10/01/2020 15:30:55',
-              message: 'Ricordati di stendere i panni',
-              status: 'sent'
+              message: "Sì, l'ho visto. Mi è piaciuto molto!",
+              status: 'received'
             },
             {
               date: '10/01/2020 15:30:55',
-              message: 'Tutto fatto!',
+              message: 'Ottimo, penso che andrò a vederlo questo fine settimana.',
               status: 'sent'
             }
           ],
@@ -122,17 +122,17 @@ createApp({
           messages: [
             {
               date: '10/01/2020 15:30:55',
-              message: 'prova?',
+              message: 'Ehi Ethan, cosa pensi di fare domani sera?',
               status: 'sent'
             },
             {
               date: '10/01/2020 15:30:55',
-              message: 'Ricordati di stendere i panni',
-              status: 'sent'
+              message: 'Non ho piani, perché?',
+              status: 'received'
             },
             {
               date: '10/01/2020 15:30:55',
-              message: 'Tutto fatto!',
+              message: 'Stavo pensando di organizzare una cena a casa mia. Vuoi unirti?',
               status: 'sent'
             }
           ],
@@ -144,17 +144,17 @@ createApp({
           messages: [
             {
               date: '10/01/2020 15:30:55',
-              message: 'prova?',
+              message: 'Ciao Frederick, come stanno andando le cose?',
               status: 'sent'
             },
             {
               date: '10/01/2020 15:30:55',
-              message: 'Ricordati di stendere i panni',
-              status: 'sent'
+              message: 'Bene, grazie! E tu?',
+              status: 'received'
             },
             {
               date: '10/01/2020 15:30:55',
-              message: 'Tutto fatto!',
+              message: 'Tutto tranquillo. Hai qualche progetto interessante in corso?',
               status: 'sent'
             }
           ],
@@ -166,17 +166,17 @@ createApp({
           messages: [
             {
               date: '10/01/2020 15:30:55',
-              message: 'prova?',
+              message: "Salve Gabriel, hai sentito parlare dell'evento in programma?",
               status: 'sent'
             },
             {
               date: '10/01/2020 15:30:55',
-              message: 'Ricordati di stendere i panni',
-              status: 'sent'
+              message: 'Sì, ne ho sentito parlare. Sembra interessante!',
+              status: 'received'
             },
             {
               date: '10/01/2020 15:30:55',
-              message: 'Tutto fatto!',
+              message: 'Stavo pensando di partecipare. Vuoi venire anche tu?',
               status: 'sent'
             }
           ],
@@ -188,44 +188,23 @@ createApp({
           messages: [
             {
               date: '10/01/2020 15:30:55',
-              message: 'prova?',
+              message: 'Ciao Henry, hai qualche consiglio su libri da leggere?',
               status: 'sent'
             },
             {
               date: '10/01/2020 15:30:55',
-              message: 'Ricordati di stendere i panni',
-              status: 'sent'
+              message: 'Certo, cosa ti interessa?',
+              status: 'received'
             },
             {
               date: '10/01/2020 15:30:55',
-              message: 'Tutto fatto!',
+              message: 'Sto cercando un buon romanzo. Qualcosa di avvincente.',
               status: 'sent'
             }
           ],
         },
-        {
-          name: 'Frank',
-          avatar: 'avatar_5.jpg',
-          visible:true,
-          messages: [
-            {
-              date: '10/01/2020 15:30:55',
-              message: 'prova?',
-              status: 'sent'
-            },
-            {
-              date: '10/01/2020 15:30:55',
-              message: 'Ricordati di stendere i panni',
-              status: 'sent'
-            },
-            {
-              date: '10/01/2020 15:30:55',
-              message: 'Tutto fatto!',
-              status: 'sent'
-            }
-          ],
-        },
-      ]
+      ],
+      currentIndex: 0,
     }
   },
 

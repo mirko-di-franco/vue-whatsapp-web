@@ -64,7 +64,10 @@
 
           <!-- List Contacts -->
           <ul class="list-contacts" >
-            <li class="p-20 d-flex" v-for="(contact, index) in contacts">
+            <li
+              @click="currentIndex = index"
+              class="p-20 d-flex"
+              v-for="(contact, index) in contacts">
             
               <div class="radius-img d-flex justify-content-center align-items-center">
                 <img :src="'assets/img/' + contact.avatar" alt="">
@@ -90,12 +93,12 @@
             
             <div class="user d-flex justify-content-center align-items-center">
               <div class="radius-img">
-                <img src="assets/img/avatar_io.jpg" alt="">
+                <img :src="'assets/img/' + contacts[currentIndex].avatar" alt="">
               </div>
 
               <div class="main-text-contact">
-                <span class="user-name">Mauro</span>
-                <span class="last-access">Ultimo messaggio oggi alle 28/03/2020 16:15:22</span>
+                <span class="user-name">{{contacts[currentIndex].name}}</span>
+                <span class="last-access">Ultimo messaggio oggi alle {{contacts[currentIndex].messages[0].date}}</span>
               </div>
             </div>
 
@@ -108,11 +111,11 @@
 
           <!-- Chat Content -->
           <div class="chat-content">
-            <div class="message sent">
-              <p>ciao come stai tutto bene<span class="time-current-message">16:15:22</span></p>
-            </div>
-            <div class="message received">
-              <p>ciao, si tutto bene e tu?<span class="time-current-message">16:15:22</span></p>
+            <div
+              class="message"
+              :class="message.status === 'sent' ? 'sent' : 'received'"
+              v-for="message in contacts[currentIndex].messages">
+              <p>{{message.message}}<span class="time-current-message">{{message.date}}</span></p>
             </div>
           </div>
 
