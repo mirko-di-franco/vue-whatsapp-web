@@ -15,7 +15,122 @@
 <body>
 
   <div id="app">
+    <div class="main-wrapper d-flex justify-content-center align-items-center">
+      <div class="container d-flex">
+        
 
+
+        <!-- Contacts Col -->
+        <div class="contacts-col">
+
+          <!-- User Account -->
+          <div class="user-account d-flex justify-content-beetween align-items-center p-20">
+            
+            <div class="user d-flex justify-content-center align-items-center">
+              <div class="radius-img">
+                <img src="assets/img/avatar_io.jpg" alt="">
+              </div>
+              <span class="user-name">###</span>
+            </div>
+
+            <div class="btn-user-account">
+              <i class="fa-solid fa-circle-notch"></i>
+              <i class="fa-solid fa-message"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="notifications d-flex align-items-center p-20">
+
+            <div class="radius-img d-flex justify-content-center align-items-center">
+              <i class="bell fa-solid fa-bell-slash"></i>
+            </div>
+
+            <div class="text">
+              <span>Ricevi notifiche di nuovi messaggi</span>
+              <a class="notifications-active" href="#">Attiva notifiche desktop</a>
+            </div>
+
+          </div>
+
+          <!-- Search Bar -->
+          <div class="search-contacts d-flex align-items-center">
+            <div class="search-contacts-icon d-flex align-items-center justify-content-center">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input placeholder="Cerca o inizia una nuova chat"/>
+          </div>
+
+          <!-- List Contacts -->
+          <ul class="list-contacts">
+            <li class="p-20 d-flex">
+            
+              <div class="radius-img d-flex justify-content-center align-items-center">
+                <img src="assets/img/avatar_3.jpg" alt="">
+              </div>
+
+              <div class="main-text-contact">
+                <span class="user-name">Mauro</span>
+                <span class="last-message-preview">ciao come stai?</span>
+              </div>
+
+              <span class="time-last-message">10/01/2020 16:15:22</span>
+            </li>
+          </ul>
+        </div>
+        <!-- /Contacts Col -->
+
+
+        <!-- Chat Col -->
+        <div class="chat-col">
+
+          <!-- User Active Chat -->
+          <div class="user-account d-flex justify-content-beetween align-items-center p-20">
+            
+            <div class="user d-flex justify-content-center align-items-center">
+              <div class="radius-img">
+                <img src="assets/img/avatar_io.jpg" alt="">
+              </div>
+
+              <div class="main-text-contact">
+                <span class="user-name">Mauro</span>
+                <span class="last-access">Ultimo messaggio oggi alle 28/03/2020 16:15:22</span>
+              </div>
+            </div>
+
+            <div class="btn-user-account">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-paperclip"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+          </div>
+
+          <!-- Chat Content -->
+          <div class="chat-content">
+            <div class="message sent">
+              <p>ciao come stai tutto bene<span class="time-current-message">16:15:22</span></p>
+            </div>
+            <div class="message received">
+              <p>ciao, si tutto bene e tu?<span class="time-current-message">16:15:22</span></p>
+            </div>
+          </div>
+
+          <!-- Messaging Interface -->
+          <div class="messaging-interface d-flex align-items-center">
+            <i class="btn fa-regular fa-face-smile"></i>
+
+            <input type="text" placeholder="Scrivi un messaggio">
+
+            <i class="btn fa-solid fa-microphone"></i>
+          </div>
+
+        </div>
+        <!-- /Chat Col -->
+
+
+      </div>
+    </div>
   </div>
 
 
