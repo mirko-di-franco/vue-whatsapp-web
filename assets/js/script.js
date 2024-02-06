@@ -1,4 +1,6 @@
+
 const {createApp} = Vue;
+
 
 createApp({
 
@@ -205,11 +207,46 @@ createApp({
         },
       ],
       currentIndex: 0,
+      newMsgStr: '',
+      botAnswers: ['Si','No','Forse'],
     }
   },
 
   methods:{
 
-  }
+    newMsg(){
+      console.log(this.newMsgStr);
+      const newMsg = {
+        date: 'prova',
+        message: this.newMsgStr,
+        status: 'sent'
+      }
+      this.contacts[this.currentIndex].messages.push(newMsg);
+      this.newMsgStr = '';
+      this.botAnswer()
+    },
+
+    botAnswer(){
+      setTimeout(() => {
+        const newAnswer = {
+          date: 'risposta',
+          message: this.botAnswers[this.getRandomNumber()],
+          status: 'received'
+        }
+        this.contacts[this.currentIndex].messages.push(newAnswer);
+        console.log(this.botAnswers[this.getRandomNumber()])
+      },1250)
+    },
+
+    getRandomNumber(){
+      return Math.floor(Math.random() * this.botAnswers.length);
+    },
+    
+    },
+
+    
+
+
+  
 
 }).mount('#app');
