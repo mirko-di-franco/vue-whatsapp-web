@@ -250,6 +250,7 @@ body {
 }
 .sent{
   justify-content: flex-end;
+  cursor: pointer;
 }
 .chat-col .chat-content .message{
   position: relative;
@@ -327,11 +328,52 @@ body {
   bottom: 5px;
   right: 10px;
   font-size: 0.7rem;
-  color: var(--secondary-text);
   color: #b8b8b8;
 }
 
+.chat-col .chat-content .message i{
+  position: absolute;
+  font-size: 1.1rem;
+  color: #b8b8b8;
+  display: none;
+  top: 5px;
+  right: 10px;
+}
 
+.chat-col .chat-content .message.sent:hover i{
+  display: block;
+}
+
+.chat-col .chat-content .text-menu{
+  position: absolute;
+  border-radius: 8px;
+  background-color: rgb(130, 219, 130);
+  top: 35px;
+  z-index: 999;
+  font-size: 0.9rem;
+  overflow: hidden;
+  display: none;
+}
+
+.chat-col .chat-content .message.received .text-menu{
+  display: none;
+}
+
+.chat-col .chat-content .text-menu.visible{
+  display: block;
+}
+
+.chat-col .chat-content .text-menu-btn{
+  white-space: nowrap;
+  font-size: 0.9rem;
+  color: white;
+  padding: 10px 20px;
+}
+
+.chat-col .chat-content .text-menu-btn:hover{
+  cursor: pointer;
+  background-color: rgb(39, 221, 39);
+}
 /* MESSAGING INTERFACE */
 .chat-col .messaging-interface{
   justify-content: space-around;

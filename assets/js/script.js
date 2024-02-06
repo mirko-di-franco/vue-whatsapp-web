@@ -17,7 +17,8 @@ createApp({
             {
               date: '10/01/2020 15:30:55',
               message: 'Hey Alexander, come stai?',
-              status: 'sent'
+              status: 'sent',
+              dropDownMenu: false,
             },
             {
               date: '10/01/2020 15:30:55',
@@ -27,7 +28,8 @@ createApp({
             {
               date: '10/01/2020 15:30:55',
               message: 'Anche io sto bene, grazie. Hai piani per il weekend?',
-              status: 'sent'
+              status: 'sent',
+              dropDownMenu: false,
             }
           ],
         },
@@ -40,7 +42,8 @@ createApp({
             {
               date: '10/01/2020 15:30:55',
               message: "Hey Olivia, hai visto l'ultimo episodio della tua serie preferita?",
-              status: 'sent'
+              status: 'sent',
+              dropDownMenu: false,
             },
             {
               date: '10/01/2020 15:30:55',
@@ -50,7 +53,8 @@ createApp({
             {
               date: '10/01/2020 15:30:55',
               message: 'È stato incredibile! Possiamo discuterne la prossima volta che ci vediamo?',
-              status: 'sent'
+              status: 'sent',
+              dropDownMenu: false,
             }
           ],
         },
@@ -63,7 +67,8 @@ createApp({
             {
               date: '10/01/2020 15:30:55',
               message: 'Salve Benjamin, hai sentito parlare della nuova serie TV?',
-              status: 'sent'
+              status: 'sent',
+              dropDownMenu: false,
             },
             {
               date: '10/01/2020 15:30:55',
@@ -73,7 +78,8 @@ createApp({
             {
               date: '10/01/2020 15:30:55',
               message: 'Wow, devo assolutamente iniziarla. Grazie per la raccomandazione!',
-              status: 'sent'
+              status: 'sent',
+              dropDownMenu: false,
             }
           ],
         },
@@ -86,7 +92,8 @@ createApp({
             {
               date: '10/01/2020 15:30:55',
               message: 'Ciao Christopher, come è andata la tua giornata?',
-              status: 'sent'
+              status: 'sent',
+              dropDownMenu: false,
             },
             {
               date: '10/01/2020 15:30:55',
@@ -96,7 +103,8 @@ createApp({
             {
               date: '10/01/2020 15:30:55',
               message: 'Capisco. Se hai bisogno di parlare, sono qui.',
-              status: 'sent'
+              status: 'sent',
+              dropDownMenu: false,
             }
           ],
         },
@@ -109,7 +117,8 @@ createApp({
             {
               date: '10/01/2020 15:30:55',
               message: 'Ciao David, hai visto il nuovo film in uscita?',
-              status: 'sent'
+              status: 'sent',
+              dropDownMenu: false,
             },
             {
               date: '10/01/2020 15:30:55',
@@ -119,7 +128,8 @@ createApp({
             {
               date: '10/01/2020 15:30:55',
               message: 'Ottimo, penso che andrò a vederlo questo fine settimana.',
-              status: 'sent'
+              status: 'sent',
+              dropDownMenu: false,
             }
           ],
         },
@@ -132,7 +142,8 @@ createApp({
             {
               date: '10/01/2020 15:30:55',
               message: 'Ehi Ethan, cosa pensi di fare domani sera?',
-              status: 'sent'
+              status: 'sent',
+              dropDownMenu: false,
             },
             {
               date: '10/01/2020 15:30:55',
@@ -142,7 +153,8 @@ createApp({
             {
               date: '10/01/2020 15:30:55',
               message: 'Stavo pensando di organizzare una cena a casa mia. Vuoi unirti?',
-              status: 'sent'
+              status: 'sent',
+              dropDownMenu: false,
             }
           ],
         },
@@ -155,7 +167,8 @@ createApp({
             {
               date: '10/01/2020 15:30:55',
               message: 'Ciao Frederick, come stanno andando le cose?',
-              status: 'sent'
+              status: 'sent',
+              dropDownMenu: false,
             },
             {
               date: '10/01/2020 15:30:55',
@@ -165,7 +178,8 @@ createApp({
             {
               date: '10/01/2020 15:30:55',
               message: 'Tutto tranquillo. Hai qualche progetto interessante in corso?',
-              status: 'sent'
+              status: 'sent',
+              dropDownMenu: false,
             }
           ],
         },
@@ -178,7 +192,8 @@ createApp({
             {
               date: '10/01/2020 15:30:55',
               message: "Salve Gabriel, hai sentito parlare dell'evento in programma?",
-              status: 'sent'
+              status: 'sent',
+              dropDownMenu: false,
             },
             {
               date: '10/01/2020 15:30:55',
@@ -188,7 +203,8 @@ createApp({
             {
               date: '10/01/2020 15:30:55',
               message: 'Stavo pensando di partecipare. Vuoi venire anche tu?',
-              status: 'sent'
+              status: 'sent',
+              dropDownMenu: false,
             }
           ],
         },
@@ -201,7 +217,8 @@ createApp({
             {
               date: '10/01/2020 15:30:55',
               message: 'Ciao Henry, hai qualche consiglio su libri da leggere?',
-              status: 'sent'
+              status: 'sent',
+              dropDownMenu: false,
             },
             {
               date: '10/01/2020 15:30:55',
@@ -211,7 +228,8 @@ createApp({
             {
               date: '10/01/2020 15:30:55',
               message: 'Sto cercando un buon romanzo. Qualcosa di avvincente.',
-              status: 'sent'
+              status: 'sent',
+              dropDownMenu: false,
             }
           ],
         },
@@ -255,6 +273,25 @@ createApp({
     getRandomNumber(){
       return Math.floor(Math.random() * this.botAnswers.length);
     },
+
+    deleteMsg(index){
+      this.contacts[this.currentIndex].messages.splice(index, 1)
+    },
+
+    toggleDropDownMenu(index) {
+      this.showDropDownMenu(index);
+      this.contacts[this.currentIndex].messages[index].dropDownMenu = !this.contacts[this.currentIndex].messages[index].dropDownMenu;
+    },
+
+    showDropDownMenu(index){
+      this.contacts.forEach(contact => {
+        contact.messages.forEach((message, i) => {
+          if (i !== index) {
+            message.dropDownMenu = false;
+          }
+        })
+      });
+    }
 
     
 

@@ -117,8 +117,16 @@
             <div
               class="message"
               :class="message.status === 'sent' ? 'sent' : 'received'"
-              v-for="message in contacts[currentIndex].messages">
-              <p>{{message.message}}<span class="time-current-message">{{message.date}}</span></p>
+              v-for="(message, index) in contacts[currentIndex].messages">
+              <p>{{message.message}}
+                <span class="time-current-message">{{message.date}}</span>
+                <i   @click="toggleDropDownMenu(index)" class="fa-solid fa-chevron-down"></i>
+              </p>
+              
+              <ul class="text-menu"  :class="{'visible' : message.dropDownMenu}">
+                <li class="text-menu-btn">Message info</li>
+                <li @click="deleteMsg(index)" class="text-menu-btn">Delete message</li>
+              </ul>
             </div>
           </div>
 
