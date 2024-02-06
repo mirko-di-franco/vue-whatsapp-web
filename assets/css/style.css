@@ -60,7 +60,7 @@ body {
 .contacts-col{
   height: 100%;
   width: 35%;
-  min-width: 150px;
+  min-width: 300px;
   border-right: 1px solid rgb(233, 233, 233);
 }
 

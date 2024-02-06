@@ -1,6 +1,7 @@
 
 const {createApp} = Vue;
 
+const dt = luxon.DateTime;
 
 createApp({
 
@@ -11,6 +12,7 @@ createApp({
           name: 'Alexander',
           avatar: 'avatar_1.jpg',
           visible:true,
+          id: 0,
           messages: [
             {
               date: '10/01/2020 15:30:55',
@@ -33,6 +35,7 @@ createApp({
           name: 'Olivia',
           avatar: 'avatar_2.jpg',
           visible:true,
+          id: 1,
           messages: [
             {
               date: '10/01/2020 15:30:55',
@@ -55,6 +58,7 @@ createApp({
           name: 'Benjamin',
           avatar: 'avatar_3.jpg',
           visible:true,
+          id: 2,
           messages: [
             {
               date: '10/01/2020 15:30:55',
@@ -77,6 +81,7 @@ createApp({
           name: 'Christopher',
           avatar: 'avatar_4.jpg',
           visible:true,
+          id: 3,
           messages: [
             {
               date: '10/01/2020 15:30:55',
@@ -99,6 +104,7 @@ createApp({
           name: 'David',
           avatar: 'avatar_5.jpg',
           visible:true,
+          id: 4,
           messages: [
             {
               date: '10/01/2020 15:30:55',
@@ -121,6 +127,7 @@ createApp({
           name: 'Ethan',
           avatar: 'avatar_6.jpg',
           visible:true,
+          id: 5,
           messages: [
             {
               date: '10/01/2020 15:30:55',
@@ -143,6 +150,7 @@ createApp({
           name: 'Frederick',
           avatar: 'avatar_7.jpg',
           visible:true,
+          id: 6,
           messages: [
             {
               date: '10/01/2020 15:30:55',
@@ -165,6 +173,7 @@ createApp({
           name: 'Gabriel',
           avatar: 'avatar_8.jpg',
           visible:true,
+          id: 7,
           messages: [
             {
               date: '10/01/2020 15:30:55',
@@ -187,6 +196,7 @@ createApp({
           name: 'Henry',
           avatar: 'avatar_9.jpg',
           visible:true,
+          id: 8,
           messages: [
             {
               date: '10/01/2020 15:30:55',
@@ -209,27 +219,31 @@ createApp({
       currentIndex: 0,
       newMsgStr: '',
       botAnswers: ['Si','No','Forse'],
+      searchName: '',
     }
   },
 
   methods:{
 
     newMsg(){
-      console.log(this.newMsgStr);
-      const newMsg = {
-        date: 'prova',
-        message: this.newMsgStr,
-        status: 'sent'
+      if(this.newMsgStr.length > 0){
+
+        console.log(this.newMsgStr);
+        const newMsg = {
+          date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT),
+          message: this.newMsgStr,
+          status: 'sent'
+        }
+        this.contacts[this.currentIndex].messages.push(newMsg);
+        this.newMsgStr = '';
+        this.botAnswer()
       }
-      this.contacts[this.currentIndex].messages.push(newMsg);
-      this.newMsgStr = '';
-      this.botAnswer()
     },
 
     botAnswer(){
       setTimeout(() => {
         const newAnswer = {
-          date: 'risposta',
+          date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT),
           message: this.botAnswers[this.getRandomNumber()],
           status: 'received'
         }
@@ -241,11 +255,19 @@ createApp({
     getRandomNumber(){
       return Math.floor(Math.random() * this.botAnswers.length);
     },
-    
-    },
 
     
 
+  },
+  computed: {
+    filterContacts() {
+      return this.contacts.filter(contact => {
+        return contact.name.toLowerCase().includes(this.searchName.toLowerCase());
+      });
+      
+    }
+
+  }
 
   
 
