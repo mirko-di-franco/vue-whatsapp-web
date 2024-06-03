@@ -8,3 +8,9 @@ Ecco una descrizione dettagliata delle funzionalità implementate:
 - **Eliminazione dei Messaggi:** Andando in hover su un messaggio inviato, appare un menu a tendina che permette di eliminare il messaggio specifico.
 
 ### Galleria
+#### Visualizzazione Chat
+![alt text](https://i.imgur.com/ivaeqQf.png)
+#### Filtro Contatti
+![alt text](https://i.imgur.com/MHOtfmp.png)
+#### Eliminazione Messaggio
+![alt text](https://i.imgur.com/eXrRXb3.png)
